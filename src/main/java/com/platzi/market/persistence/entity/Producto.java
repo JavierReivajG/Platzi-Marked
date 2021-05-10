@@ -1,20 +1,20 @@
-package com.proyectweb.mark.persistence.entity;
+package com.platzi.market.persistence.entity;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.*;
 
 @Entity
-@Table(name="productos")
+@Table(name = "productos")
 public class Producto {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTIFY)
-    @Column (name = "id_producto")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_producto")
     private Integer idProducto;
 
     private String nombre;
 
     @Column(name = "id_categoria")
-    private Integer IdCategoria;
+    private Integer idCategoria;
 
     @Column(name = "codigo_barras")
     private String codigoBarras;
@@ -27,13 +27,9 @@ public class Producto {
 
     private Boolean estado;
 
-
-    /* Mapeo de datos  */
     @ManyToOne
-    @JoinColumn
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
-
-
 
     public Integer getIdProducto() {
         return idProducto;
@@ -52,11 +48,11 @@ public class Producto {
     }
 
     public Integer getIdCategoria() {
-        return IdCategoria;
+        return idCategoria;
     }
 
     public void setIdCategoria(Integer idCategoria) {
-        IdCategoria = idCategoria;
+        this.idCategoria = idCategoria;
     }
 
     public String getCodigoBarras() {
@@ -89,5 +85,13 @@ public class Producto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }

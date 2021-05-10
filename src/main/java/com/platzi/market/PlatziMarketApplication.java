@@ -1,13 +1,13 @@
-package com.proyectweb.mark;
+package com.platzi.market;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PlatziMarkApplication {
+public class PlatziMarketApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PlatziMarkApplication.class, args);
+		SpringApplication.run(PlatziMarketApplication.class, args);
 	}
 
 }

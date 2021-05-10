@@ -1,5 +1,4 @@
-package com.proyectweb.mark.persistence.crud;
-
+package com.platzi.market.persistence.crud;
 
 import com.platzi.market.persistence.entity.Producto;
 import org.springframework.data.repository.CrudRepository;

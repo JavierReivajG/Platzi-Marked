@@ -1,5 +1,4 @@
-package com.proyectweb.mark.persistence.entity;
-
+package com.platzi.market.persistence.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
