@@ -14,6 +14,14 @@ public class Categoria {
     private String descripcion;
     private Boolean estado;
 
+
+
+
+    /* mapeo de datos */
+    @OneToMany(mappedBy = categoria)
+    private List<Producto> productos;
+
+
     public Integer getIdCategoria() {
         return idCategoria;
     }

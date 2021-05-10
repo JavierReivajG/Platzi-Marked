@@ -1,9 +1,6 @@
 package com.proyectweb.mark.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name="clientes")
@@ -18,6 +15,9 @@ public class Cliente {
 
     @Column(name="correo_electronico")
     private String correoElectronico;
+
+    @OneToMany(mappedBy = "cliente")
+    private list<Compra> compras;
 
     public String getId() {
         return id;

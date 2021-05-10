@@ -23,6 +23,11 @@ public class Compra {
     private String comentario;
     private String estado;
 
+
+    @ManyToOne
+    @JoinColumn(name = id_cliente, insertable = false, updatable = false)/* Para que no permita realizar cambios */
+    private Cliente cliente;
+
     public Integer getIdCompra() {
         return idCompra;
     }
